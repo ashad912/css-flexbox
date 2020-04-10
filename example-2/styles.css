@@ -1,0 +1,105 @@
+* { /*CSS reset for all browsers */
+    font-family: verdana;
+    margin: 0;
+}
+
+body {
+    background: #eeee;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+
+}
+
+/* menu base styles */
+
+nav {
+    background: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    background-color: #777;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* social menu base styles*/
+
+a.tw{
+    background: url(img/tw.png) no-repeat center;
+    background-size: 80%;
+}
+
+a.fb{
+    background: url(img/fb.png) no-repeat center;
+    background-size: 80%;
+}
+
+.social a{
+    text-indent: -10000px; /*line indent - only first line, good for paragraphs */
+}
+
+.social{
+    max-width: 80px;
+    margin: 0 auto;
+}
+
+nav ul.social{
+    flex: 1 1 0;
+    display: flex;
+    /*flex-direction: column;*/
+}
+
+nav ul.social li {
+    flex: 1 1 0;
+}
+
+/* .social li {
+    align-self: center;
+} */
+/* flex styles */
+
+@media screen and (min-width: 768px) {
+    /* Classic */
+    /* nav ul {
+        white-space: nowrap;
+    }
+
+    nav li {
+        display: inline-block;
+        width: 25%;
+    } */
+
+    nav ul {
+        display: flex;
+        justify-content: flex-start
+    }
+
+    nav li {
+        flex: 1;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .social {
+        margin: 0;
+    }
+}

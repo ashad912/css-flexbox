@@ -1,0 +1,66 @@
+*{
+    font-family: verdana;
+    margin: 0;
+}
+
+body {
+    background: #eeee;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+
+}
+
+.flex-container {
+    display: flex;
+    background: white;
+    flex-wrap: wrap; /*wrap is set on container: wrap-reverse - box going up; witohut flex-grow on box - it generate min width*/
+    flex-flow: column; /*column - now flex basis control height of element; can reverse column and row */
+    /*justify-content: center; /*applied to main axis */
+    align-items: center; /*applied to cross axis */
+    height: 600px;
+}
+
+/*.flex-container:after { /* clearing floats - bit hacky 
+    content: ""; /* content 'after' .flex-container
+    display: block;
+    clear: both; /* clearing floats, from both sides
+}*/
+
+.box {
+    width: 100px;
+    height: 100px;
+    flex: 0 0 100px; /*grow, shrink, basis */
+    /* flex: 1; it means grow=1, shrink=1, basic=0 by default
+    /*min-width: 200px; flex-basis make it unnessecary; min-width force min value, flex-basis shrinks!
+
+
+    /*flex-grow: 1;
+    /*width: 320px;*/
+    
+    /*float: left; /*float stacks boxes but without block space */
+}
+
+.one {
+    background: red;
+    /*flex-basis: 100px; /* they grow as flex-grow but due to basis, they end up with diffrent width */
+    /*flex-shrink: 1; /* how fast it shrinks - relarive to others */
+    /*flex-grow: 2; /* total 12 */
+}
+
+.two {
+    background: blue;
+    /*flex-basis: 200px;
+    /*flex-shrink: 2;
+    /*flex-grow: 3;*/
+}
+
+.three {
+    background: green;
+    /*flex-basis: 300px;
+    /*flex-shrink: 3;
+    /* flex-grow: 1; */
+}
